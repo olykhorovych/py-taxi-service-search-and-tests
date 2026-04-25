@@ -55,7 +55,6 @@ class ManufacturerModelTest(TestCase):
             f"{manufacturer.name} {manufacturer.country}")
 
 
-
 class UserModelTest(TestCase):
 
     def setUp(self):
@@ -65,7 +64,7 @@ class UserModelTest(TestCase):
             password="abc1234",
             first_name="Test",
             last_name="User",
-            license_number = "ABC12345"
+            license_number="ABC12345"
         )
 
     def test_str_representation(self):
@@ -89,4 +88,3 @@ class UserModelTest(TestCase):
     def test_get_absolute_url(self):
         user = User.objects.get(pk=1)
         self.assertEqual(user.get_absolute_url(), "/drivers/1/")
-

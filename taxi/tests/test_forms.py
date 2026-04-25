@@ -43,7 +43,9 @@ class DriverLicenseUpdateFormTest(TestCase):
         form = DriverLicenseUpdateForm(data=data)
         self.assertFalse(form.is_valid())
 
-    def test_validation_license_number_with_lowercase_letters_in_begin_value(self):
+    def test_validation_license_number_with_lowercase_letters_in_begin_value(
+            self
+    ):
         data = {"license_number": "abc12345"}
         form = DriverLicenseUpdateForm(data=data)
         self.assertFalse(form.is_valid())
@@ -53,7 +55,9 @@ class DriverLicenseUpdateFormTest(TestCase):
         form = DriverLicenseUpdateForm(data=data)
         self.assertFalse(form.is_valid())
 
-    def test_validation_license_number_with_incorrect_number_letters_in_begin(self):
+    def test_validation_license_number_with_incorrect_number_letters_in_begin(
+        self
+    ):
         data = {"license_number": "AB123456"}
         form = DriverLicenseUpdateForm(data=data)
         self.assertFalse(form.is_valid())
