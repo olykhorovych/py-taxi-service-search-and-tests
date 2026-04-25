@@ -5,6 +5,7 @@ from taxi.forms import (
     SearchCarForm,
     DriverCreationForm,
     DriverLicenseUpdateForm,
+    SearchDriverForm,
 )
 
 
@@ -29,7 +30,7 @@ class SearchDriverFormTest(TestCase):
         data = {
             "username": "TestUser"
         }
-        self.assertTrue(SearchManufacturerForm(data=data).is_valid())
+        self.assertTrue(SearchDriverForm(data=data).is_valid())
 
 
 class DriverLicenseUpdateFormTest(TestCase):

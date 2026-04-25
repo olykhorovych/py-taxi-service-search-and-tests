@@ -53,8 +53,7 @@ def validate_license_number(
 
 
 class SearchDriverForm(forms.Form):
-    username = forms.ModelMultipleChoiceField(
-        queryset=get_user_model().objects.all(),
+    username = forms.CharField(
         widget=forms.TextInput(attrs={"placeholder": "Username",
                                       "class": "form-control"}),
         required=False,
